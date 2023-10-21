@@ -1,0 +1,224 @@
+<html><head>
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DWG1KWHN47"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DWG1KWHN47');
+</script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+
+@font-face {
+  font-family: "Garamond1";
+  src: url("/Garamond/EBGaramond12-Regular.woff") format('woff');
+}
+
+@font-face {
+  font-family: "Garamond1";
+  src: url("/Garamond/EBGaramond12-Italic.woff") format('woff');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Garinit1";
+  src: url("/Garamond/EBGaramond-Initials.woff") format('woff');
+}
+
+
+html * {
+    font-family:'Garamond1';
+    font-feature-settings: "cv04", "hlig", "liga", "clig";
+}
+
+h1, h2 {
+    font-feature-settings: "smcp";
+    font-weight: normal;
+}
+
+
+        body{
+            background-color: beige;
+            width: 1072px;
+            height: 1000px;
+            margin-left: auto;
+            margin-right:auto;
+            margin-top: 50px;
+       }
+
+        .brdr{
+            border-width: 5px;
+            border-color:black;
+            border: solid;
+            position: relative;
+        }
+       
+    </style>
+    <title>EPID II</title>
+</head>
+
+<body>
+    <div class="brdr"><h1 style="text-align:center"> Epidemiologia II - Pedro H. R. S. de Valois </h1>
+        <div style="position:absolute;top: 110px;left: 50.8%;transform: translate(-50%, -50%);"><a href="../home.html">[Índice]</a> &nbsp; &nbsp;<a href="/mth2.html">[Próximo]</a></div>
+    </div>
+    
+    <div style="width:50%;border-width:5px;border-color:black;border-right: solid;height: 89.5%; position: relative; top:40px">
+    
+    <div style="padding-right:15px;text-align:justify; text-justify:inter-word"><h1 style="text-align:center">☙Testes Diagnósticos❧</h1><br> 
+    <div style="font-family:Garinit1; font-size:50pt; float:left; margin-right: 5px; margin-top: 5px;">T</div>estes diagnósticos, assim como o martelo para o pedreiro ou a roda para o oleiro, são os instrumentos indispensáveis da prática médica, haja vista sua capacidade de triar indivíduos quanto a certo acometimento <b>de forma melhor que o acaso</b>.<br><br>&nbsp; &nbsp; Isso quer dizer que utilizando-se testes diagnósticos conseguimos distinguir indivíduos saudáveis e doentes de forma mais precisa do que se utilizássemos uma moeda no "cara ou coroa". A taxa de acertos de um teste diagnóstico, como veremos mais adiante, é a chamada <b>acurácia</b>.<br><br>&nbsp; &nbsp;Testes diagnósticos trabalham com <b>magnitudes</b>, ou seja, necessitam de algo <b>quantificável</b> para que possam formular um resultado, quer positivo ou negativo; <i>e. g.</i> o teste para identificarmos o diabetes utiliza como parâmetro a glicemia, já o teste para identificarmos a Doença de Huntington utiliza como parâmetro o número de repetições CAG. Perceba que esses dois parâmetros são <b>numéricos</b> (podem ser representados por números), não qualitativos. Isso é o que os permite serem utilizados em testes diagnósticos. Exercite essa ideia a seguir:<br><br>Dos parâmetros abaixo, quais são quantitativos e quais são qualitativos?<br><br><li>Etnia</li><br><li>Idade</li><br><li><i>γ</i>-GT (ou GGT)</li><br><li>Sexo</li><br><br>Mais um questionamento antes de prossguirmos. Reflita:<br><br>Imagine que um teste extremamente ruim seja inventado; um teste consideravelmente pior que o acaso (cara ou coroa). Pessoas saudáveis são apontadas como doentes e doentes são apontadas como saudáveis. Uma pessoa com conhecimento profundo de lógica e matemática, e que sabe que o teste é extremamente ruim, poderia tirar algum proveito dele?
+    </div>
+
+    <button id="quant1" onclick="DeActivateA1()" style="position: relative; top:-323px; left: 160px">
+        Quantitativo
+    </button>
+
+    <button id="qual1" onclick="DeActivateB1()" style="position: relative; top:-323px; left:170px">
+        Qualitativo
+    </button>
+
+    <button id="quant2" onclick="DeActivateA2()" style="position: relative; top:-282px; left: -5px">
+        Quantitativo
+    </button>
+
+    <button id="qual2" onclick="DeActivateB2()" style="position: relative; top:-282px; left:5px">
+        Qualitativo
+    </button>
+
+    <button id="quant3" onclick="DeActivateA3()" style="position: relative; top:-241px; left: -169px">
+        Quantitativo
+    </button>
+
+    <button id="qual3" onclick="DeActivateB3()" style="position: relative; top:-241px; left:-160px">
+        Qualitativo
+    </button>
+
+    <button id="quant4" onclick="DeActivateA4()" style="position: relative; top:-223px; left: 160px">
+        Quantitativo
+    </button>
+
+    <button id="qual4" onclick="DeActivateB4()" style="position: relative; top:-223px; left:170px">
+        Qualitativo
+    </button>
+
+    <button id="ss" onclick="DeActivatef1()" style="position: relative; left: 15px">
+        SIM
+    </button>
+
+    <button id="nn" onclick="DeActivatef2()" style="position: relative; left:60px">
+        NÃO
+    </button>
+
+    <p id="cert1" style="position:relative; top:-382px; left: 360px; color:green; visibility: hidden">Correto!</p>
+    <p id="cert2" style="position:relative; top:-375px; left: 360px; color:green; visibility: hidden">Correto!</p>
+    <p id="cert3" style="position:relative; top:-370px; left: 360px; color:green; visibility: hidden">Correto!</p>
+    <p id="cert4" style="position:relative; top:-366px; left: 360px; color:green; visibility: hidden">Correto!</p>
+
+    <p id="errado1" style="position: relative; left: 350px; top: -522px; background-color:rgb(212, 164, 164); height: 110px; width: 358px; visibility: hidden ; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll;"> NÃO! A etnia de uma pessoa não pode ser representada por um número. As possibilidades são todas qualitativas; <i>e. g.</i> caucasiano, negro, oriental, pardo <i>&</i> c. <br><br><button onclick="Fechar1()">Fechar</button></p>
+
+    <p id="errado2" style="position: relative; left: 350px; top: -650px; background-color:rgb(212, 164, 164); height: 110px; width: 358px; visibility: hidden ; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll;"> NÃO! Conseguimos representar a idade de uma pessoa apenas através de números; <i>e. g.</i> 14 anos, 44 anos <i>&</i> c. <br><br><button onclick="Fechar2()">Fechar</button></p>
+
+    <p id="errado3" style="position: relative; left: 350px; top: -777px; background-color:rgb(212, 164, 164); height: 110px; width: 358px; visibility: hidden ; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll;"> NÃO! O gama GT é uma dosagem apresentada numericamente, geralmente na unidade massa atômica (U) por litro (L)<i> e. g.</i> 28 U/L <i>&</i> c. <br><br><button onclick="Fechar3()">Fechar</button></p>
+
+    <p id="errado4" style="position: relative; left: 350px; top: -920px; background-color:rgb(212, 164, 164); height: 110px; width: 358px; visibility: hidden ; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll;"> NÃO! O sexo de um indivíduo não pode ser representado por um número. Há apenas duas opções: masculino e feminino. <br><br><button onclick="Fechar4()">Fechar</button></p>
+
+    <p id="erradof" style="position: relative; left: 320px; top: -800px; background-color:rgb(212, 164, 164); height: 175px; width: 460px; visibility: hidden; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll;"> Errado. Testes que acertam quase sempre ou que erram quase sempre são igualmente úteis. Como? O teste que acerta quase sempre irá identificar corretamente doentes e não doentes. Já o teste que quase sempre erra, por sua vez, será útil da mesma forma se invertermos seu resultado. Pense comigo: se o teste do enunciado quse sempre erra, então uma pessoa apontada por ele como "doente" tem grande chances de estar saudável e vice-versa. <br><br><button onclick="Fechar5()">Fechar</button></p>
+
+    <p id="certf" style="position: relative; left: 320px; top: -1030px; background-color:rgb(111, 194, 111); height: 175px; width: 460px; visibility: hidden; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll;"> Correto! Como? Um teste que quase sempre erra torna-se tão útil quanto um teste que quase sempre acerta ao invertermos seus resultados. Se o teste do enunciado apontou alguém como "doente", basta invertermos o resultado, uma vez que ele quase sempre erra: isto é, a pessoa muito provavelmente está saudável. Dessa forma, pode-se inferir o seguinte: uma acurácia próxima de 0% é tão útil, quando conhecida, quanto uma próxima de 100%. <br><br><button onclick="Fechar6()">Fechar</button></p>
+        
+    </div>
+
+    <div style="width:50%;border-width:5px;border-color:black;height: 89.5%;position: relative;top: -854px;left: 556px;">
+    
+        <div style="padding-right:15px;text-align:justify; text-justify:inter-word"> <br><br>
+        (RESTANTE A SER POSTADO NO DIA 17/10)
+        </div>
+
+</body>
+<script>
+    function DeActivateA1(){
+            document.querySelector('#quant1').disabled = true;
+            document.querySelector('#qual1').disabled = true;
+            document.querySelector('#errado1').style.visibility = "visible";
+        }
+
+    function DeActivateB1(){
+        document.querySelector('#qual1').disabled = true;
+        document.querySelector('#quant1').disabled = true;
+        document.querySelector('#cert1').style.visibility = "visible";
+    }
+
+    function DeActivateA2(){
+            document.querySelector('#quant2').disabled = true;
+            document.querySelector('#qual2').disabled = true;
+            document.querySelector('#cert2').style.visibility = "visible";
+        }
+
+    function DeActivateB2(){
+        document.querySelector('#qual2').disabled = true;
+        document.querySelector('#quant2').disabled = true;
+        document.querySelector('#errado2').style.visibility = "visible"
+    }
+
+    function DeActivateA3(){
+            document.querySelector('#quant3').disabled = true;
+            document.querySelector('#qual3').disabled = true;
+            document.querySelector('#cert3').style.visibility = "visible";
+        }
+
+    function DeActivateB3(){
+        document.querySelector('#qual3').disabled = true;
+        document.querySelector('#quant3').disabled = true;
+        document.querySelector('#errado3').style.visibility = "visible";
+    }
+
+    function DeActivateA4(){
+            document.querySelector('#quant4').disabled = true;
+            document.querySelector('#qual4').disabled = true;
+            document.querySelector('#errado4').style.visibility = "visible";
+        }
+
+    function DeActivateB4(){
+        document.querySelector('#qual4').disabled = true;
+        document.querySelector('#quant4').disabled = true;
+        document.querySelector('#cert4').style.visibility = "visible";
+    }
+
+    function DeActivatef1(){
+        document.querySelector('#ss').disabled = true;
+        document.querySelector('#nn').disabled = true;
+        document.querySelector('#certf').style.visibility = "visible";
+    }
+
+    function DeActivatef2(){
+        document.querySelector('#ss').disabled = true;
+        document.querySelector('#nn').disabled = true;
+        document.querySelector('#erradof').style.visibility = "visible";
+    }
+
+    function Fechar1(){
+        document.querySelector('#errado1').style.visibility = "hidden";
+    }
+    function Fechar2(){
+        document.querySelector('#errado2').style.visibility = "hidden";
+    }
+    function Fechar3(){
+        document.querySelector('#errado3').style.visibility = "hidden";
+    }
+    function Fechar4(){
+        document.querySelector('#errado4').style.visibility = "hidden";
+    }
+
+    function Fechar5(){
+        document.querySelector('#erradof').style.visibility = "hidden";
+    }
+
+    function Fechar6(){
+        document.querySelector('#certf').style.visibility = "hidden";
+    }
+
+</script>
+
+</html>
