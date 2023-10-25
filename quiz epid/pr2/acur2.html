@@ -10,7 +10,7 @@
 </script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
+<style>
 
 @font-face {
   font-family: "Garamond1";
@@ -101,20 +101,19 @@ h1, h2 {
         <div style="padding-right:15px;text-align:justify; text-justify:inter-word">
             &nbsp;&nbsp;&nbsp;Uma especificidade de 67% significa, portanto, que de 100 pessoas saudáveis o teste será capaz de identificar 67 indivíduos como saudáveis (VN); os outros 33 saudáveis serão erroneamente identificados como doentes (FP) pelo teste. Não é difícil perceber que quanto maior a especificidade, melhor. Quanto maior a especificidade, menor será o número de falsos positivos. Nessa mesma linha de raciocínio, reflita:<br><br>Um teste com <y style="font-family:'Times New Roman">e = 100%</y> é, portanto, um teste perfeito?
 
-            <button id="ss" onclick="DeActivatef1()" style="position: absolute; left: 15px; top: 170px">
+            <button id="ss" onclick="DeActivatef1()" style="position: absolute; left: 115px; top: 170px">
                 SIM
             </button>
         
-            <button id="nn" onclick="DeActivatef2()" style="position: absolute; left:100px; top: 170px">
+            <button id="nn" onclick="DeActivatef2()" style="position: absolute; left:300px; top: 170px">
                 NÃO
             </button>
 
-            <p id="certf" style="position: absolute; left: 160px; top: 70px; background-color:rgb(111, 194, 111); height: 130px; width: 460px; visibility: hidden; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll; z-index:1"> Correto! De que vale um teste identificar corretamente todos os saudáveis como saudáveis (especificidade de 100%) se ele aponta uma grande quantidade de doentes como saudáveis (grande número de falsos negativos)? <br><br><button onclick="Fechar1()">Fechar</button></p>
+            <p id="certf" style="position: absolute; left: 360px; top: 70px; background-color:rgb(111, 194, 111); height: 130px; width: 460px; visibility: hidden; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll; z-index:1"> Correto! De que vale um teste identificar corretamente todos os saudáveis como saudáveis (especificidade de 100%) se ele aponta uma grande quantidade de doentes como saudáveis (grande número de falsos negativos)? O teste perfeito é aquele com especificidade e sensibilidade de cem por cento. <br><br><button onclick="Fechar1()">Fechar</button></p>
 
-            <p id="erradf" style="position: absolute; left: 160px; top: 70px; background-color:rgb(235, 160, 160); height: 190px; width: 460px; visibility: hidden; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll; z-index:1"> Errado! Pense comigo: há 100 doentes e 100 saudáveis a serem testados. Os 100 saudáveis foram identificados como saudáveis pelo teste (ou seja, o resultado foi negativo para todos). A especificidade é, portanto, 100%. Porém, 66 doentes foram identificados como saudáveis. 66 falsos negativos. De que adianta termos uma especificidade muito boa se o número de falsos negativos é alarmante? Os Falsos Negativos (FN) serão abordados no próximo conceito, a sensibilidade. <br><br><button onclick="Fechar2()">Fechar</button></p>
+            <p id="erradf" style="position: absolute; left: 160px; top: 70px; background-color:rgb(235, 160, 160); height: 190px; width: 460px; visibility: hidden; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll; z-index:1"> Errado! Pense comigo: há 100 doentes e 100 saudáveis a serem testados. Os 100 saudáveis foram identificados como saudáveis pelo teste (ou seja, o resultado foi negativo para todos). A especificidade é, portanto, 100%. Porém, 66 doentes foram identificados como saudáveis. 66 falsos negativos. De que adianta termos uma especificidade muito boa se o número de falsos negativos é alarmante? Os Falsos Negativos (FN) serão abordados no próximo conceito, a sensibilidade. O teste perfeito é aquele com especificidade e sensibilidade de cem por cento. <br><br><button onclick="Fechar2()">Fechar</button></p>
 
-            <br><br><br><br><br> CONTINUA NO DIA 24/10
-
+            <br><br><br><br><br>&nbsp;&nbsp;&nbsp;Já a <y style="font-feature-settings: 'smcp'; font-size: 30">sensibilidade</y> trata-se de outro valor numérico; este indicando a <b>capacidade do teste de identificar pessoas doentes como doentes.</b> É representado pela letra "<b>s</b>" e também varia de <y style="font-family:'Times New Roman">0 (0%)</y> a <y style="font-family:'Times New Roman">1 (100%)</y>. A fórmula da sensibilidade é dada por:<br><br> \[s=\frac{VP}{VP+FN}\]<br>&nbsp;&nbsp;&nbsp;Se um teste tem sensibilidade de 72,56%, então de 10.000 pessoas doentes, 7.256 serão corretamente identificadas pelo teste como doentes (VP). As 2.744 restantes receberão erroneamente o resultado negativo (FN) no teste. Similarmente à especificidade, não é difícil perceber que quanto maior a sensibilidade, melhor, pois menores serão os números de falsos negativos (FN). <br><br><b>Lembre-se</b>: não adianta nada termos sensibilidade de 100% e uma especificidade ruim ou vice-versa. Ambas são necessárias para o "teste perfeito".<br><br>&nbsp;&nbsp;&nbsp;Até agora estamos trabalhando com especificidade e sensibilidade separadamente. A ponto de possivelmente surgir a dúvida: <i>"Por que testes diagnósticos não são todos perfeitos, então? É só maximizar a especificidade e a sensibilidade ao mesmo tempo!"</i><br><br>Adianto-lhe o seguinte: <b>a especificidade afeta a sensibilidade e vice-versa. Quando uma aumenta, a outra tende a diminuir.</b> Apenas em casos extraordinários isso não acontece. Essa ideia será formalmente apresentada no capítulo <i>Trabalhando com Gráficos de Distribuição</i> e retomada no capítulo <i>Curva ROC</i>. Para isso, porém, será necessário que conheça outro conceito básico: a <b>acurácia</b>, tema de um dos seguintes capítulos.<br><br>Exercite o que aprendeu nas questões <a href="./qu3st2.html">1</a>, <a href="./qu3st3.html">2</a>, <a href="./qu3st4.html">3</a>, <a href="./qu3st5.html">4</a> e <a href="./qu3st6.html">5</a>. 
         </div>
 
     </div>
