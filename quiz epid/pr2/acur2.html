@@ -1,15 +1,6 @@
 <html><head>
     <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DWG1KWHN47"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DWG1KWHN47');
-</script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <style>
 
 @font-face {
@@ -29,7 +20,7 @@
 }
 
 
-html * {
+html, button{
     font-family:'Garamond1';
     font-feature-settings: "cv04", "hlig", "liga", "clig";
 }
@@ -91,7 +82,7 @@ h1, h2 {
     <button onclick="checkcheck2()" id="btn2" style="position: absolute;top: 495px;left: 384px; visibility:hidden"> Corrigir</button>
     <h1 style="text-align:center">☙Especificidade & Sensibilidade❧</h1>
     
-    <br>&nbsp;&nbsp; Agora que já está familiarizado com os princípios básicos de testes diagnósticos, apresentarei-lhe dois conceitos-chave: <b>especificidade</b> e <b>sensibilidade</b>. Atenção redobrada:<br><br><y style="font-feature-settings: 'smcp'; font-size: 30">&nbsp;&nbsp;&nbsp;especificidade</y> trata-se de um valor numérico que indica <b>a capacidade do teste de identificar pessoas saudáveis como saudáveis</b>. É representado pela letra "<b>e</b>" e varia de <y style="font-family:'Times New Roman">0</y> a <y style="font-family:'Times New Roman">1</y> (ou de <y style="font-family:'Times New Roman">0%</y> a <y style="font-family:'Times New Roman">100%</y>). O valor <y style="font-family:'Times New Roman">100%</y> indicaria uma especificidade perfeita: todos os saudáveis receberão um resultado negativo do teste; todos os saudáveis serão verdadeiros negativos (VN), portanto. A fórmula da especificidade é dada por: \[e=\frac{VN}{VN+FP}\] 
+    <br>&nbsp;&nbsp; Agora que já está familiarizado com os princípios básicos de testes diagnósticos, apresentarei-lhe dois conceitos-chave: <b>especificidade</b> e <b>sensibilidade</b>. Atenção redobrada:<br><br><y style="font-feature-settings: 'smcp'; font-size: 30">&nbsp;&nbsp;&nbsp;especificidade</y> trata-se de um valor numérico que indica <b>a capacidade do teste de identificar pessoas saudáveis como saudáveis</b>. É representado pela letra "<b>e</b>" e varia de <y style="font-family:'Times New Roman">0</y> a <y style="font-family:'Times New Roman">1</y> (ou de <y style="font-family:'Times New Roman">0%</y> a <y style="font-family:'Times New Roman">100%</y>). O valor <y style="font-family:'Times New Roman">100%</y> indicaria uma especificidade perfeita: todos os saudáveis receberão um resultado negativo do teste; todos os saudáveis serão verdadeiros negativos (VN), portanto. A fórmula da especificidade é dada por: \[e=\frac{VN}{VN+FP}=\frac{Saudáveis\; Identificados}{Total\; de\; Saudáveis}\] 
 
     </div>
 
@@ -113,13 +104,23 @@ h1, h2 {
 
             <p id="erradf" style="position: absolute; left: 160px; top: 70px; background-color:rgb(235, 160, 160); height: 190px; width: 460px; visibility: hidden; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll; z-index:1"> Errado! Pense comigo: há 100 doentes e 100 saudáveis a serem testados. Os 100 saudáveis foram identificados como saudáveis pelo teste (ou seja, o resultado foi negativo para todos). A especificidade é, portanto, 100%. Porém, 66 doentes foram identificados como saudáveis. 66 falsos negativos. De que adianta termos uma especificidade muito boa se o número de falsos negativos é alarmante? Os Falsos Negativos (FN) serão abordados no próximo conceito, a sensibilidade. O teste perfeito é aquele com especificidade e sensibilidade de cem por cento. <br><br><button onclick="Fechar2()">Fechar</button></p>
 
-            <br><br><br><br><br>&nbsp;&nbsp;&nbsp;Já a <y style="font-feature-settings: 'smcp'; font-size: 30">sensibilidade</y> trata-se de outro valor numérico; este indicando a <b>capacidade do teste de identificar pessoas doentes como doentes.</b> É representado pela letra "<b>s</b>" e também varia de <y style="font-family:'Times New Roman">0 (0%)</y> a <y style="font-family:'Times New Roman">1 (100%)</y>. A fórmula da sensibilidade é dada por:<br><br> \[s=\frac{VP}{VP+FN}\]<br>&nbsp;&nbsp;&nbsp;Se um teste tem sensibilidade de 72,56%, então de 10.000 pessoas doentes, 7.256 serão corretamente identificadas pelo teste como doentes (VP). As 2.744 restantes receberão erroneamente o resultado negativo (FN) no teste. Similarmente à especificidade, não é difícil perceber que quanto maior a sensibilidade, melhor, pois menores serão os números de falsos negativos (FN). <br><br><b>Lembre-se</b>: não adianta nada termos sensibilidade de 100% e uma especificidade ruim ou vice-versa. Ambas são necessárias para o "teste perfeito".<br><br>&nbsp;&nbsp;&nbsp;Até agora estamos trabalhando com especificidade e sensibilidade separadamente. A ponto de possivelmente surgir a dúvida: <i>"Por que testes diagnósticos não são todos perfeitos, então? É só maximizar a especificidade e a sensibilidade ao mesmo tempo!"</i><br><br>Adianto-lhe o seguinte: <b>a especificidade afeta a sensibilidade e vice-versa. Quando uma aumenta, a outra tende a diminuir.</b> Apenas em casos extraordinários isso não acontece. Essa ideia será formalmente apresentada no capítulo <i>Trabalhando com Gráficos de Distribuição</i> e retomada no capítulo <i>Curva ROC</i>. Para isso, porém, será necessário que conheça outro conceito básico: a <b>acurácia</b>, tema de um dos seguintes capítulos.<br><br>Exercite o que aprendeu nas questões <a href="./qu3st2.html">1</a>, <a href="./qu3st3.html">2</a>, <a href="./qu3st4.html">3</a>, <a href="./qu3st5.html">4</a> e <a href="./qu3st6.html">5</a>. 
+            <br><br><br><br><br>&nbsp;&nbsp;&nbsp;Já a <y style="font-feature-settings: 'smcp'; font-size: 30">sensibilidade</y> trata-se de outro valor numérico; este indicando a <b>capacidade do teste de identificar pessoas doentes como doentes.</b> É representado pela letra "<b>s</b>" e também varia de <y style="font-family:'Times New Roman">0 (0%)</y> a <y style="font-family:'Times New Roman">1 (100%)</y>. A fórmula da sensibilidade é dada por:<br><br> \[s=\frac{VP}{VP+FN}=\frac{Doentes\;Identificados}{Total\;de\;Doentes}\]<br>&nbsp;&nbsp;&nbsp;Se um teste tem sensibilidade de 72,56%, então de 10.000 pessoas doentes, 7.256 serão corretamente identificadas pelo teste como doentes (VP). As 2.744 restantes receberão erroneamente o resultado negativo (FN) no teste. Similarmente à especificidade, não é difícil perceber que quanto maior a sensibilidade, melhor, pois menores serão os números de falsos negativos (FN). <br><br><b>Lembre-se</b>: não adianta nada termos sensibilidade de 100% e uma especificidade ruim ou vice-versa. Ambas são necessárias para o "teste perfeito".<br><br>&nbsp;&nbsp;&nbsp;Até agora estamos trabalhando com especificidade e sensibilidade separadamente. A ponto de possivelmente surgir a dúvida: <i>"Por que testes diagnósticos não são todos perfeitos, então? É só maximizar a especificidade e a sensibilidade ao mesmo tempo!"</i><br><br>Adianto-lhe o seguinte: <b>a especificidade afeta a sensibilidade e vice-versa. Quando uma aumenta, a outra tende a diminuir.</b> Apenas em casos extraordinários isso não acontece. Essa ideia será formalmente apresentada no capítulo <i>Trabalhando com Gráficos de Distribuição</i> e retomada no capítulo <i>Curva ROC</i>. Para isso, porém, será necessário que conheça outro conceito básico: a <b>acurácia</b>, tema de um dos seguintes capítulos. Faça o cálculo da sensibilidade e da especificidade da tabela à esquerda (se prestou atenção, um deles você já fez).<br><br><br>Exercite o que aprendeu nas questões <a href="./qu3st2.html">1</a>, <a href="./qu3st3.html">2</a>, <a href="./qu3st4.html">3</a>, <a href="./qu3st5.html">4</a> e <a href="./qu3st6.html">5</a>.
+
+            <button onclick="Sshow()" id="how" style="position: absolute;top: 815px;left: 0px;"> Ver resposta</button>
+
+            <p id="answ" style="position: absolute; top: 580px; background-color:rgb(223, 223, 223); height: 200px; width: 580px; visibility: hidden ; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll; z-index:1; font-family:'Times New Roman', Times, serif">\[e=\frac{VN}{VN+FP}=\frac{55}{55+6}=\frac{55}{61}=0,90164...=90\frac{10}{61}\;\%\]<br>\[s=\frac{VP}{VP+FN}=\frac{92}{92+37}=\frac{92}{129}=0,71317...=71\frac{41}{129}\;\%\]<br>Problemas com matemática? Clique [<a href="../Mth/mth1.html">AQUI</a>].<button onclick="Fechar3()" style="position:absolute;right:20px">Fechar</button></p>
         </div>
 
     </div>
 
 </body>
 <script>
+
+    function Sshow(){
+        document.querySelector('#answ').style.visibility = "visible";
+        document.querySelector('#how').disabled = true;
+    }
+
    function checkcheck(){
     if (document.getElementById('vp').value == "92") {
         document.querySelector('#vp').style.backgroundColor = "lightgreen";
@@ -227,6 +228,10 @@ h1, h2 {
 
    function Fechar2(){
     document.querySelector('#erradf').style.visibility = "hidden";
+   }
+
+   function Fechar3(){
+    document.querySelector('#answ').style.visibility = "hidden";
    }
 </script>
 
