@@ -23,15 +23,11 @@
   font-style: italic;
 }
 
-@font-face {
-  font-family: "Garinit1";
-  src: url("/Garamond/EBGaramond-Initials.woff") format('woff');
-}
-
 
 html, button{
     font-family:'Garamond1';
     font-feature-settings: "cv04", "hlig", "liga", "clig";
+    line-height: 1.25;
 }
 
 h1, h2 {
@@ -89,7 +85,7 @@ h1, h2 {
     <input id="q22" style="width:46px;position: absolute;top: 446px;left: 387px; text-align: center; visibility: hidden" type="text">
 
     <button onclick="checkcheck2()" id="btn2" style="position: absolute;top: 495px;left: 384px; visibility:hidden"> Corrigir</button>
-    <h1 style="text-align:center">☙Especificidade & Sensibilidade❧</h1>
+    <h1 style="text-align:center">☙<a style="color:#9f0000;">Especificidade & Sensibilidade</a>❧</h1>
     
     <br>&nbsp;&nbsp; Agora que já está familiarizado com os princípios básicos de testes diagnósticos, apresentarei-lhe dois conceitos-chave: <b>especificidade</b> e <b>sensibilidade</b>. Atenção redobrada:<br><br><y style="font-feature-settings: 'smcp'; font-size: 30">&nbsp;&nbsp;&nbsp;especificidade</y> trata-se de um valor numérico que indica <b>a capacidade do teste de identificar pessoas saudáveis como saudáveis</b>. É representado pela letra "<b>e</b>" e varia de <y style="font-family:'Times New Roman">0</y> a <y style="font-family:'Times New Roman">1</y> (ou de <y style="font-family:'Times New Roman">0%</y> a <y style="font-family:'Times New Roman">100%</y>). O valor <y style="font-family:'Times New Roman">100%</y> indicaria uma especificidade perfeita: todos os saudáveis receberão um resultado negativo do teste; todos os saudáveis serão verdadeiros negativos (VN), portanto. A fórmula da especificidade é dada por: \[e=\frac{VN}{VN+FP}=\frac{Saudáveis\; Identificados}{Total\; de\; Saudáveis}\] 
 
