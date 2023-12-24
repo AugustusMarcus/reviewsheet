@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+@font-face {
+  font-family: "Garamond1";
+  src: url("/Garamond/EBGaramond12-Regular.woff") format('woff');
+}
+
+        body{
+            background-color: beige;
+            width: 1072px;
+            height: 1000px;
+            margin-left: auto;
+            margin-right:auto;
+            margin-top: 50px;
+       }
+
+       html * {
+    font-family:'Garamond1';
+    font-feature-settings: "cv04", "hlig", "liga", "clig", "swsh";
+}
+
+        h1 {
+            font-feature-settings: "smcp";
+            font-family:'Garamond1';
+            font-weight: normal;
+        }
+
+       #b{
+            border-style: solid;
+            border-width: 5px;
+            border-color:black;
+            padding: 10px;
+            padding-bottom:0px;
+            height: 100px;
+            width: 580px;
+            top: 50px;
+            position: relative;
+            margin:auto;
+            text-align:justify;
+            
+        }
+
+        button{
+            display: block;
+        }
+
+    </style>
+    <title>PR1 - Questão 2</title>
+</head>
+
+<body>
+    <div style="border-style: solid; border-width: 5px; border-color:black;"><h1 style="text-align:center; width:800px;margin-right:auto;margin-left:auto"> Epidemiologia II - Pedro H.R.S. de Valois </h1></div>
+    <div id="b">
+        2) Um estudo epidemiológico observacional analítico realizado com 100 indivíduos possui a seguinte metodologia: primeiramente a amostra foi dividida em desfecho (D) e não desfecho (<a style="font-family:'Times New Roman'; color:black">D̄</a>); a ambos os grupos foi perguntado "quantos de vocês sofreram a exposição a certo tempo atrás?". Que tipo de estudo é esse?
+    </div>
+    
+    <!-- Alternativas -->
+    <div style="position: relative; left: 240px; width: 600px">
+        <button id="butA" onclick="DeActivateA()" style="position: relative; top:80px;">
+            A
+        </button>
+
+        <button id="butB" onclick="DeActivateB()" style="position: relative; top:130px;">
+            B
+        </button>
+
+        <button id="butC" onclick="DeActivateC()" style="position: relative; top:180px;">
+            C
+        </button>
+
+        <button id="butD" onclick="DeActivateD()" style="position: relative; top: 230px;">
+            D
+        </button>
+
+        <p style="position: relative; left: 50px; top:-22px; width: 500px;"> Coorte Prospectiva. </p>
+
+        <p style="position: relative; left: 50px; top:14px; width: 500px;"> Caso-controle. </p>
+
+        <p style="position: relative; left: 50px; top:50px; width: 500px;"> Coorte Retrospectiva. </p>
+
+        <p style="position: relative; left: 50px; top: 86px; width: 500px;"> Ecológico.</p>
+    
+    </div>
+
+    <!-- Respostas questão A-->
+
+    <p id="answa" style="position: relative; left: 419px; top: -148px; background-color:rgb(212, 164, 164); height: 180px; width: 580px; visibility: hidden ; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll;"> Não. Em uma coorte prospectiva os 100 indivíduos seriam separados em pessoas que foram expostas (E) e pessoas que não foram expostas (Ē) -- isso é o que torna o estudo uma coorte. Após essa separação, observaríamos os dois grupos por algum período de tempo (geralmente décadas) -- é isso que torna o estudo prospectivo. Após esse intervalo de tempo, chamaríamos de volta ambos os grupos e lhes perguntaríamos: "Vocês que foram expostos, o grupo E, quantos de vocês desenvolveram o desfehco? E vocês do grupo não exposto, o grupo Ē, quantos de vocês desenvolveram o desfecho?". Em notação matemática, estamos procurando por <b style="font-family:Times New Roman">n(E ∧ D)</b> e <b style="font-family:Times New Roman">n(Ē ∧ D)</b>.<br><br><b>Nota</b>: por questões didáticas a seleção nesse exemplo foi feita puramente por meio de perguntas. Em um estudo real a determinação de um desfecho ou não geralmente é feita por meio de testes epidemiológicos (matéria da PR2). Exemplo: considerando que o desfecho é o diabetes, para vermos quem desenvolveu o desfecho analisaríamos a glicemia em jejum, por exemplo. Não seria por meio de uma pergunta "você está diabético?".
+    
+    <br><br><a href="" style="color: blue;">[Fechar]</a></p>
+
+    <!-- Respostas Questão B -->
+
+    <p id="answb" style="position: relative; left: 381px; top: -286px; background-color:rgb(123, 197, 147); height: 180px; width: 580px; visibility: hidden ; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll;"> Correto. O desenho do estudo é, de fato, um caso-controle. Houve divisão da amostra em desfecho (D) e não desfecho (<a style="font-family:'Times New Roman'; color:black">D̄</a>), observando-se uma exposição passada (caso-controle é, portanto, retrospectivo) em cada um dos dois grupos. Daí vem o nome do estudo: partimos do CASO (desfecho) para o CONTROLE (exposição). Enquanto o caso-controle pergunta "dos que sofreram o desfecho, quantos haviam sido expostos?", a coorte pergunta "dos expostos, quantos sofreram o desfecho"; um o inverso do outro.<br><br><a href="" style="color: blue;">[Fechar]</a></p>
+
+    <!-- Resposta C -->
+
+    <p id="answc" style="position: relative; left: 431px; top: -430px; background-color:rgb(212, 164, 164); height: 120px; width: 580px; visibility: hidden ; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll; z-index:1;"> O estudo enunciado olha para o passado, <i>i. e.</i> é retrospectivo; assim como a opção marcada e estudos de caso-controle são-no. Porém a amostra foi dividida em desfecho (D) e não desfecho (<a style="font-family:'Times New Roman'; color:black">D̄</a>), o que é característico de estudos caso-controle. Caso a amostra tivesse sido dividida em expostos (E) e não expostos (Ē) essa alternativa estaria correta.
+    
+    <br><br><a href="" style="color: blue;">[Fechar]</a></p>
+
+    <!-- Resposta D -->
+
+    <div id="answd" style="position: relative; left: 363px; top: -505px; background-color:rgb(212, 164, 164); height: 200px; width: 500px; visibility: hidden; border: 3px; border-style: solid; padding: 5px; z-index:1; overflow-y: scroll;"><p id="chng" style="margin-top:0px">Nem pensar. Em estudos ecológicos os dados são abordados de forma <b>agregada</b>. Isso significa que não trabalhamos com dados discretos (representados por números naturais <a style="font-family:'Times New Roman'; color:black">ℕ</a>); <i>e. g.</i> 100 pessoas no total, 70 expostas, <a style="font-family:'Times New Roman'; color:black">0</a> com desfecho (números inteiros). Em estudos ecológicos trabalhamos, geralmente, com taxas e porcentagens considerando uma população total (geralmente de um país, estado, cidade ou do mundo inteiro); <i>e. g.</i> taxa de mortalidade, taxa de natalidade, taxa de letalidade, porcentagem de infectados... Essas taxas e porcentagens geralmente são representadas por números racionais <a style="font-family:'Times New Roman'; color:black">ℚ</a>, como 18,6% ou 0,009 pessoas/100.000 hab. (clique <a onclick="ShowQz()" style="color: blue; cursor: pointer;">AQUI</a> se não entendeu).</p><br><a href="" style="color: blue;">[Fechar]</a></div>
+
+    <!-- Menu -->
+    <div style="position:relative; left: 240px; top: -501px; width: 300px">
+        <a href="./quest1.html" style="color: blue;">[Anterior]</a>&nbsp; &nbsp; &nbsp;
+        <a href="../home.html" style="color: blue;">[Índice]</a> &nbsp; &nbsp; &nbsp;
+        <a href="./quest3.html" style="color: blue;">[Próximo]</a>
+    </div>
+
+    <script>
+        function DeActivateA(){
+            document.querySelector('#butA').disabled = true;
+            document.querySelector('#answa').style.visibility = "visible";
+        }
+
+        function DeActivateB(){
+            document.querySelector('#butB').disabled = true;
+            document.querySelector('#answb').style.visibility = "visible";
+        }
+
+        function DeActivateC(){
+            document.querySelector('#butC').disabled = true;
+            document.querySelector('#answc').style.visibility = "visible";
+        }
+
+        function DeActivateD(){
+            document.querySelector('#butD').disabled = true;
+            document.querySelector('#answd').style.visibility = "visible";
+        }
+
+        function ShowQz(){
+
+            document.getElementById("chng").innerHTML = "Enquanto estudos como a coorte, o caso-controle e o transversal trabalham com dados individualizados, considerando cada indivíduo unitariamente, o estudo ecológico trabalha com populações de forma integrada, sintética, olhando o todo. Exemplificando, enquanto um estudo transversal diz &ldquo;103 pessoas têm a doença&rdquo;, um ecológico diz &ldquo;83,2% têm a doença&rdquo;. Perceba que dados individualizados sempre pertencerão ao conjunto dos naturais (0,1,2,3...), uma vez que não faz sentido dizermos &ldquo;5,5 pessoas morreram&rdquo;. O que seria esse 0,5? Já dados agregados geralmente são números racionais (ℚ). Exercite isso na <a href=./quest4.html>Questão 4</a>.";
+        }
+              
+    </script>
+
+
+
+</body></html>

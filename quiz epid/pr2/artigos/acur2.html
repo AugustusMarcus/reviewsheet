@@ -1,0 +1,231 @@
+
+<html><head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="/easier.js"></script>
+    <style>
+
+@font-face {
+  font-family: "Garamond1";
+  src: url("/Garamond/EBGaramond12-Regular.woff") format('woff');
+}
+
+@font-face {
+  font-family: "Garamond1";
+  src: url("/Garamond/EBGaramond12-Italic.woff") format('woff');
+  font-style: italic;
+}
+
+
+html, button{
+    font-family:'Garamond1';
+    font-feature-settings: "cv04", "hlig", "liga", "clig";
+    line-height: 1.25;
+}
+
+h1, h2 {
+    font-feature-settings: "smcp";
+    font-weight: normal;
+}
+
+
+        body{
+            background-color: beige;
+            width: 1072px;
+            height: 1000px;
+            margin-left: auto;
+            margin-right:auto;
+            margin-top: 50px;
+       }
+
+        .brdr{
+            border-width: 5px;
+            border-color:black;
+            border: solid;
+            position: relative;
+        }
+
+       
+    </style>
+    <title>Testes Diagnósticos - pág. 2</title>
+</head>
+
+<body>
+    <div class="brdr"><h1 style="text-align:center"> Epidemiologia II - Pedro H. R. S. de Valois </h1>
+        <div style="position:absolute;top: 110px;left: 50.8%;transform: translate(-50%, -50%); margin-bottom:30px"><a href="./acur.html">[Anterior]</a> &nbsp; &nbsp;<a href="../../home.html">[Índice]</a></div>
+        <div style="position:absolute;top: 133px;left: 17.6%;transform: translate(-50%, -50%); margin-bottom:30px; color:#9f0000">[ELEMENTOS EM VERMELHO PODEM SER ABERTOS]</div>
+    </div>
+    
+    <div style="width:50%;border-width:5px;border-color:black;border-right: solid;height: 95.5%; position: relative; top:40px; margin-top:25px">
+    
+    <div style="padding-right:15px;text-align:justify; text-justify:inter-word;">Exercite abaixo os conceitos anteriormente apresentados:<br><br><b>1)</b> 190 pessoas foram testadas para COVID-19. O teste escolhido apontou positivo para 98 indivíduos. 61 pessoas não tinham COVID-19, das quais o teste apontou negativo para 55. A partir disso preencha a tabela a seguir (<u>escreva apenas os números</u>) e responda as perguntas:<br>
+    <img src="../images/tbl2.jpg" style="scale:80%">
+    
+    <input id="vp" style="width:46px;position: absolute;top: 197px;left: 187px; text-align: center" type="text">
+    <input id="fp" style="width:46px;position: absolute;top: 197px;left: 285px; text-align: center" type="text">
+    <input id="totpos" style="width:46px;position: absolute;top: 197px;left: 387px; text-align: center" type="text">
+    <input id="fn" style="width:46px;position: absolute;top: 250px;left: 187px; text-align: center" type="text">
+    <input id="vn" style="width:46px;position: absolute;top: 250px;left: 285px; text-align: center" type="text">
+    <input id="totneg" style="width:46px;position: absolute;top: 250px;left: 387px; text-align: center" type="text">
+    <input id="totdoen" style="width:46px;position: absolute;top: 300px;left: 187px; text-align: center" type="text">
+    <input id="totsaud" style="width:46px;position: absolute;top: 300px;left: 285px; text-align: center" type="text">
+    <input id="tottot" style="width:46px;position: absolute;top: 300px;left: 387px; text-align: center" type="text">
+
+    <button onclick="checkcheck()" style="position: absolute;top: 356px;left: 61px;"> Corrigir</button>
+
+    <p id="q2"><i><br>Acerte a questão acima para desbloquear esta pergunta!<br><br>Acerte a questão acima para desbloquear esta pergunta!</i></p>
+
+    <input id="q21" style="width:46px;position: absolute;top: 405px;left: 387px; text-align: center; visibility: hidden" type="text">
+    <input id="q22" style="width:46px;position: absolute;top: 446px;left: 387px; text-align: center; visibility: hidden" type="text">
+
+    <button onclick="checkcheck2()" id="btn2" style="position: absolute;top: 495px;left: 384px; visibility:hidden"> Corrigir</button>
+    <h1 style="text-align:center">☙<a style="color:#9f0000;">Especificidade & Sensibilidade</a>❧</h1>
+    
+    &nbsp;&nbsp; Agora que já está familiarizado com os princípios básicos de testes diagnósticos, apresentarei-lhe dois conceitos-chave: <b>especificidade</b> e <b>sensibilidade</b>. Atenção redobrada:<br><br><y style="font-feature-settings: 'smcp'; font-size: 30">&nbsp;&nbsp;&nbsp;especificidade</y> trata-se de um valor numérico que indica <b>a capacidade do teste de identificar pessoas saudáveis como saudáveis</b>. Uma vez que, como apresentado a seguir, é uma <a style="color:#9f0000">razão</a> entre um conjunto e seu subconjunto, podemos interpretá-la também como <b>a <u>chance</u> do teste identificar um saudável como saudável</b>. É representada pela letra "<b>e</b>" e varia de <y style="font-family:'Times New Roman">0</y> a <y style="font-family:'Times New Roman">1</y> (ou de <y style="font-family:'Times New Roman">0%</y> a <y style="font-family:'Times New Roman">100%</y>). O valor <y style="font-family:'Times New Roman">100%</y> indicaria uma especificidade perfeita: todos os saudáveis receberão um resultado negativo do teste; todos os saudáveis serão verdadeiros negativos (VN), portanto. A fórmula da especificidade é dada por:<br><br> \[e=\frac{VN}{VN+FP}=\frac{Saudáveis\; Identificados}{Total\; de\; Saudáveis}\]
+    
+    <button id="ovr1" style="position: absolute; top:685px; left: 225px; color: transparent; background-color: transparent; border: none; cursor:pointer" onclick="show('#ratio','')"> aaaaa</button>
+
+    <p id="ratio" style="position: absolute; left:268px; top: 350px; background-color:rgb(223, 223, 223); height: 400px; width: 580px; visibility: hidden; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll; z-index:1; font-family:'Times New Roman', Times, serif; padding: 30px"><k style="text-align: center; display:block; color:#9f0000;">CONHECIMENTO EXTRA</k><br>Se temos um conjunto <b>C</b> com um número "n" de elementos e <b>K</b>, um subconjunto de <b>C</b>, com um número "p" de elementos, podemos dizer que, ao selecionarmos um elemento de <b>C</b> ao acaso, a chance desse elemento pertencer a <b>K</b> é p ÷ n. Esse é o raciocínio fundamental da <b>probabilidade</b>. Explicarei em termos mais simples:<br><br> Imagine um estacionamento com 10 carros no total. Desses 10 carros, 3 são vermelhos. O conjunto de 10 carros é como se fosse o conjunto <b>C</b>; os 3 carros vermelhos, o <b>K</b>. Perceba que o conjunto <b>K</b> é um subconjunto de <b>C</b>, pois todos os 3 carros vermelhos também pertencem ao conjunto <b>C</b>, uma vez estão no estacionamento. Visualize isso com o diagrama de Venn a seguir:<br><br> <img src="./imgs/Venn1.png" style="height:300px; margin:auto; display:block;"><br><br> Se escolhermos um dos 10 carros ao acaso, a chance de ser vermelho é, portanto: <br><br>\[\frac{Carros\;Vermelhos}{Total\;de\;Carros}=\frac{n(K)}{n(C)}=\frac{3}{10}=33\frac{1}{3}\%\]<br> Perceba a semelhança com as fórmulas da especificidade e da sensibilidade no texto da página. Daí a possbilidade de interpretarmos ambas como <u>probabilidades</u>.  <br><br> <button onclick="fechar('#ratio')" style="position:absolute;right:20px">Fechar</button></p>
+
+    </div>
+
+     </div>
+
+    <div style="width:50%;height: 89.5%;position: relative;top: -920px;left: 557px;">
+        <div style="padding-right:15px;text-align:justify; text-justify:inter-word">
+            &nbsp;&nbsp;&nbsp;Uma especificidade de 67% significa, portanto, que de 100 pessoas saudáveis o teste será capaz de identificar <a style="color:#9f0000">aproximadamente</a> 67 indivíduos como saudáveis (VN); os outros 33 saudáveis serão erroneamente identificados como doentes (FP) pelo teste. Não é difícil perceber que quanto maior a especificidade, melhor. Quanto maior a especificidade, menor será o número de falsos positivos. Nessa mesma linha de raciocínio, reflita:<br><br>Um teste com <y style="font-family:'Times New Roman">e = 100%</y> é, portanto, um teste perfeito?
+
+            <button id="ss" onclick="DeActivatef(0)" style="position: absolute; left: 115px; top: 190px">
+                SIM
+            </button>
+        
+            <button id="nn" onclick="DeActivatef(1)" style="position: absolute; left:300px; top: 190px">
+                NÃO
+            </button>
+
+            <p id="certf" style="position: absolute; left: 360px; top: 70px; background-color:rgb(111, 194, 111); height: 130px; width: 460px; visibility: hidden; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll; z-index:1"> Correto! De que vale um teste identificar corretamente todos os saudáveis como saudáveis (especificidade de 100%) se ele aponta uma grande quantidade de doentes como saudáveis (grande número de falsos negativos)? O teste perfeito é aquele com especificidade e sensibilidade de cem por cento. <br><br><button onclick="fechar('#certf')">Fechar</button></p>
+
+            <p id="erradf" style="position: absolute; left: 160px; top: 70px; background-color:rgb(235, 160, 160); height: 190px; width: 460px; visibility: hidden; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll; z-index:1"> Errado! Pense comigo: há 100 doentes e 100 saudáveis a serem testados. Os 100 saudáveis foram identificados como saudáveis pelo teste (ou seja, o resultado foi negativo para todos). A especificidade é, portanto, 100%. Porém, 66 doentes foram identificados como saudáveis. 66 falsos negativos. De que adianta termos uma especificidade muito boa se o número de falsos negativos é alarmante? Os Falsos Negativos (FN) serão abordados no próximo conceito, a sensibilidade. O teste perfeito é aquele com especificidade e sensibilidade de cem por cento. <br><br><button onclick="fechar('#erradf')">Fechar</button></p>
+
+            <br><br><br><br><br>&nbsp;&nbsp;&nbsp;Já a <y style="font-feature-settings: 'smcp'; font-size: 30">sensibilidade</y> trata-se de outro valor numérico; este indicando a <b>capacidade do teste de identificar pessoas doentes como doentes</b>, ou <b>a <u>chance</u> do teste acusar "positivo" para um doente</b>. É representado pela letra "<b>s</b>" e também varia de <y style="font-family:'Times New Roman">0 (0%)</y> a <y style="font-family:'Times New Roman">1 (100%)</y>. A fórmula da sensibilidade é dada por:<br><br> \[s=\frac{VP}{VP+FN}=\frac{Doentes\;Identificados}{Total\;de\;Doentes}\]<br>&nbsp;&nbsp;&nbsp;Se um teste tem sensibilidade de 72,56%, então de 10.000 pessoas doentes, aproximadamente 7.256 serão corretamente identificadas pelo teste como doentes (VP). As 2.744 restantes (em média) receberão erroneamente o resultado negativo (FN) no teste. Similarmente à especificidade, não é difícil perceber que quanto maior a sensibilidade, melhor, pois menores serão os números de falsos negativos (FN). <br><br><b>Lembre-se</b>: não adianta nada termos sensibilidade de 100% e uma especificidade ruim ou vice-versa. Ambas são necessárias para o "teste perfeito".<br><br>&nbsp;&nbsp;&nbsp;Até agora estamos trabalhando com especificidade e sensibilidade separadamente. A ponto de possivelmente surgir a dúvida: <i>"Por que testes diagnósticos não são todos perfeitos, então? É só maximizar a especificidade e a sensibilidade ao mesmo tempo!"</i><br><br>Adianto-lhe o seguinte: <b>a especificidade afeta a sensibilidade e vice-versa. Quando uma aumenta, a outra tende a diminuir.</b> Apenas em casos extraordinários isso não acontece. Essa ideia será formalmente apresentada no capítulo <i>Trabalhando com Gráficos de Distribuição</i> e retomada no capítulo <i>Curva ROC</i>. Para isso, porém, será necessário que conheça outro conceito básico: a <b>acurácia</b>, tema de um dos seguintes capítulos. Faça o cálculo da sensibilidade e da especificidade da tabela à esquerda (se prestou atenção, um deles você já fez).<br><br><br><br><br>Exercite o que aprendeu nas questões <a href="./qu3st2.html">1</a>, <a href="./qu3st3.html">2</a>, <a href="./qu3st4.html">3</a>, <a href="./qu3st5.html">4</a> e <a href="./qu3st6.html">5</a>.
+
+            <button onclick="show('#answ','#how')" id="how" style="position: absolute;top: 870px;left: 0px;" disabled> Resolva os exercícios à esquerda para desbloquear as respostas</button>
+
+            <p id="answ" style="position: absolute; top: 615px; background-color:rgb(223, 223, 223); height: 200px; width: 580px; visibility: hidden ; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll; z-index:1; font-family:'Times New Roman', Times, serif">\[e=\frac{VN}{VN+FP}=\frac{55}{55+6}=\frac{55}{61}=0,90164...=90\frac{10}{61}\;\%\]<br>\[s=\frac{VP}{VP+FN}=\frac{92}{92+37}=\frac{92}{129}=0,71317...=71\frac{41}{129}\;\%\]<br>Problemas com matemática? Clique [<a href="../../Mth/mth1.html">AQUI</a>].<button onclick="fechar('#answ')" style="position:absolute;right:20px">Fechar</button></p>
+
+            <p id="aprox" style="position: absolute; left:-151px; top: 26px; background-color:rgb(223, 223, 223); height: 264px; width: 580px; visibility: hidden; border: 3px; border-style: solid; padding: 5px; overflow-y: scroll; z-index:1; font-family:'Times New Roman', Times, serif; padding: 30px"><k style="text-align: center; display:block; color:#9f0000;">CONHECIMENTO EXTRA</k><br>Aproximadamente, uma vez que estamos lidando com probabilidade, o que está intrinsecamente associada a fenômenos aleatórios. Quando lemos que "a especificidade de um teste é 70,65%", por exemplo; significa que, se testarmos 10.000 pessoas saudáveis, identificaremos <u>uma média de</u> 7.065 pessoas como saudáveis. Essa expressão <u>"em média"</u> indica que podemos encontrar em testes sucessivos 7066, 7071, 7064..., mas ao tirarmos a média de todos os valores acharemos 70,65%.<br><br>É por isso que, ao solicitada a interpretação de um valor como especificidade, sensibilidade, acurácia <i>& c.</i> vale à pena adicionar o termo "aproximadamente" ou "em média" na resposta, como o fiz no texto da página. <br><br> <button onclick="fechar('#aprox')" style="position:absolute;right:20px">Fechar</button></p>
+            
+            <button style="position: absolute; top:23px; left: 150px; background-color: transparent; color: transparent; border: none; cursor:pointer" onclick="show('#aprox','')"> aaaaaaaaaaaaaaaaaaaaa</button>
+        </div>
+
+    </div>
+
+</body>
+<script>
+
+   function checkcheck(){
+    if (document.getElementById('vp').value == "92") {
+        document.querySelector('#vp').style.backgroundColor = "lightgreen";
+    } else {
+        document.querySelector('#vp').style.backgroundColor = "rgb(228, 162, 162)";
+    }
+
+    if (document.getElementById('fp').value == "6") {
+        document.querySelector('#fp').style.backgroundColor = "lightgreen";
+    } else {
+        document.querySelector('#fp').style.backgroundColor = "rgb(228, 162, 162)";
+    }
+
+    if (document.getElementById('totpos').value == "98") {
+        document.querySelector('#totpos').style.backgroundColor = "lightgreen";
+    } else {
+        document.querySelector('#totpos').style.backgroundColor = "rgb(228, 162, 162)";
+    }
+
+    if (document.getElementById('fn').value == "37") {
+        document.querySelector('#fn').style.backgroundColor = "lightgreen";
+    } else {
+        document.querySelector('#fn').style.backgroundColor = "rgb(228, 162, 162)";
+    }
+
+    if (document.getElementById('vn').value == "55") {
+        document.querySelector('#vn').style.backgroundColor = "lightgreen";
+    } else {
+        document.querySelector('#vn').style.backgroundColor = "rgb(228, 162, 162)";
+    }
+
+    if (document.getElementById('totneg').value == "92") {
+        document.querySelector('#totneg').style.backgroundColor = "lightgreen";
+    } else {
+        document.querySelector('#totneg').style.backgroundColor = "rgb(228, 162, 162)";
+    }
+
+    if (document.getElementById('totdoen').value == "129") {
+        document.querySelector('#totdoen').style.backgroundColor = "lightgreen";
+    } else {
+        document.querySelector('#totdoen').style.backgroundColor = "rgb(228, 162, 162)";
+    }
+
+    if (document.getElementById('totsaud').value == "61") {
+        document.querySelector('#totsaud').style.backgroundColor = "lightgreen";
+    } else {
+        document.querySelector('#totsaud').style.backgroundColor = "rgb(228, 162, 162)";
+    }
+
+    if (document.getElementById('tottot').value == "190") {
+        document.querySelector('#tottot').style.backgroundColor = "lightgreen";
+    } else {
+        document.querySelector('#tottot').style.backgroundColor = "rgb(228, 162, 162)";
+    }
+
+    if (document.getElementById('tottot').value == "190" && document.getElementById('totsaud').value == "61" && document.getElementById('totdoen').value == "129" && document.getElementById('totneg').value == "92" && document.getElementById('vn').value == "55" && document.getElementById('fn').value == "37" && document.getElementById('totpos').value == "98" && document.getElementById('fp').value == "6" && document.getElementById('vp').value == "92"){
+        document.getElementById("q2").innerHTML = "<br>Quantos testes deram resultado falso positivo (FP)?<br><br>Qual o resultado da divisão VP/(VP+FN)?<br><i>Responder com 4 casas decimais ou em porcentagem<br> com 2 casas decimais. Atenção ao arredondar!</i>";
+        show('#q22',"");
+        show('#q21',"");
+        show('#btn2',"");
+        Scoot('#ovr1',41,'top');
+    
+   }
+}
+
+   function checkcheck2(){
+
+    var answ = ["0,7132", "0.7132", " 0.7132", " 0,7132", "0,7132 ", "0.7132 ", "71,32", "71.32", "71,32%", "71,32% ", "71.32%", "71.32 %", "71,32 ", "71.32 ", "71,32% ", "71.32% "];
+
+    var answerr = ["0,7131", "0.7131", " 0.7131", " 0,7131", "0,7131 ", "0.7131 ", "71,31", "71.31", "71,31%", "71,31 %" , "71.31%", "71.31% ", "71,31 ", "71.31 ", "71,31% ", "71,31 % ", "71.31% ", "71.31 % "];
+
+    if (document.getElementById('q21').value == "6") {
+        document.querySelector('#q21').style.backgroundColor = "lightgreen";
+    } else {
+        document.querySelector('#q21').style.backgroundColor = "rgb(228, 162, 162)";
+    }
+
+    if (answ.includes(document.getElementById('q22').value)) {
+        document.querySelector('#q22').style.backgroundColor = "lightgreen";
+        document.querySelector('#how').disabled = false;
+        document.getElementById("how").innerHTML = "Ver Respostas";
+
+    } else if(answerr.includes(document.getElementById('q22').value)){
+        document.querySelector('#q22').style.backgroundColor = "orange";
+        document.getElementById("q2").innerHTML = "<br>Quantos testes deram resultado falso positivo (FP)?<br><br>Qual o resultado da divisão VP/(VP+FN)?<br><i style=\"color:orange\">Você arredondou errado. 0,71317 arredonda-se<br>para 0,7132 ou 71,32%. Vou considerar dessa vez.<br>Cuidado na próxima.</i>";
+        document.querySelector('#how').disabled = false;
+        document.getElementById("how").innerHTML = "Ver Respostas";
+        Scoot('#ovr1',24,'top');
+    
+    } else {
+        document.querySelector('#q22').style.backgroundColor = "rgb(228, 162, 162)";
+        
+    }
+   }
+
+   function DeActivatef(n){
+    if (n==0){
+        show('#erradf','#ss,#nn');
+    } else if (n==1) {
+        show('#certf','#ss,#nn');
+    }
+   }
+
+</script>
+
+</html>
